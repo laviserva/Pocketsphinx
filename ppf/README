@@ -1,0 +1,41 @@
+This project aims at postprocessing the ASR output by recovering capitalization
+and punctuation marks. This is done based on a capitalized and punctuated
+Language Model.
+
+
+The Language Model:
+
+For the post processing task the language model used has to contain capitalized
+words and punctuation mark word tokens. In the training data, commas are
+replaced with <COMMA> and periods are replaced with <PERIOD>. Also sentences
+should be grouped into paragraphs so that start and end of sentence markers (<s>
+and </s>) are not very frequent.  The language model need to be compressed from
+ARPA format to DMP format with sphinx_lm_convert (or sphinx3_lm_convert).
+
+The gutenberg.DMP language model is correctly formatted and can be found in the
+models/ folder.
+
+The project contains two implementations: one using WFST and one using a dynamic
+programming Viterbi Algorithm. The WFST method relies on openFST for composition
+and bestpath, while the Viterbi Algorithm outputs the capitalized and punctuated
+text with no forther processing.
+
+
+The dynamic algorithm relies on iterating throught word symbols to create word
+sequences, which are evaluated and put into stacks. When a stack gets full (a
+maximum capacity is set) it gets sorted (by sequence probabilities) and the
+lowest scoring part is discarded. This way bad scoring sequences are discarded,
+and only the best ones are kept. The final solution is the sequence with the
+same size as the input, with the best probability.
+
+To compile the project install ant and be sure to set the required enviroment
+variables.
+
+Then type the following:
+
+ant
+
+To postprocess text use the postprocess.sh script:
+
+sh ./postprocessing.sh -input_text path_to_file -lm path_to_lm
+
