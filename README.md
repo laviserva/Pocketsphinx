@@ -8,7 +8,11 @@ pasos para que funcione.
 
     -sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev.  
     -python -m pip install --upgrade pip setuptools wheel  
-    -pip install --upgrade pocketsphinx  
+    -pip install --upgrade pocketsphinx 
+    
+ En caso de que falle la instalación de la librería principal, recurrir a la instalación manual descrita en Pypi y sus diferentes versiones
+ 
+ https://pypi.org/project/pocketsphinx/
 
 <br>2: Entrar a python y encontrar la carpeta de los modelos y data; el retorno del siguiente codigo es el path.  <br/>
 
