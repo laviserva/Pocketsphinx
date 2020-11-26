@@ -1,11 +1,12 @@
 # pocketsphinx  
-Algoritmo de voz a texto  
+Algoritmo de voz a texto realizado en python3
 
 pasos para que funcione.  
 
 1: instalar dependencias y ṕcketsphix.  
     -sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev.  
-    -pip install pocketsphinx.  
+    -python -m pip install --upgrade pip setuptools wheel
+    -pip install --upgrade pocketsphinx
 2: Entrar a python y encontrar la carpeta de los modelos y data; el retorno del siguiente codigo es el path.  
     from pocketsphinx import *  
     Path_model = get_model_path()  
