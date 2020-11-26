@@ -29,3 +29,6 @@ pasos para que funcione.
 Para que funcione se debe tener esto en orden  
 La entrada será un archivo .wav ubicado en get_data_path() el nombre y path puede definirse al cambiar la linea 10 del archivo main.py  
 La salida será un archivo sin extensión ubicado en get_data_path() cuyo nombre será "output2.output" Para cambiar el nombre y el path de salida se debe cambiar la linea 67 del archivo text_clearner.py
+Si se detecta un asistente; siri, alexa, rachael, xochitl etc. Se generará un archivo con el nombre del asistente por ejemplo "Siri", sin extensión, para modificar el nombre, y directorio de salida ir al archívo "Punctuation.py" y modificar la línea 100
+
+Nota: Todos los path de los archivos y funciones están relacionados cualquier fallo está relacionada a una modificación en el orden.
