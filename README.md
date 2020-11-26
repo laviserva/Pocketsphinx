@@ -28,10 +28,7 @@ pasos para que funcione.
     <br><br/>
 6: Descargar archivo "main.py", "text_cleaner.py" y "wav_2_text.py"  
     - Colocar estos 3 archivos en una carpeta acompañado de la carpeta ppf como se indicó previamente
-      
-        <br><br/>
-          
-          
+
 Para que funcione se debe tener esto en orden  
 La entrada será un archivo .wav ubicado en get_data_path() el nombre y path puede definirse al cambiar la linea 10 del archivo main.py  
 La salida será un archivo sin extensión ubicado en get_data_path() cuyo nombre será "output2.output" Para cambiar el nombre y el path de salida se debe cambiar la linea 67 del archivo text_clearner.py
