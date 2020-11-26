@@ -4,29 +4,36 @@ Algoritmo de voz a texto realizado en python3
 pasos para que funcione.  
 
 1: instalar dependencias y pócketsphix.  
+
+
     -sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev.  
     -python -m pip install --upgrade pip setuptools wheel  
     -pip install --upgrade pocketsphinx  
-    <br><br/>
+
 <br>2: Entrar a python y encontrar la carpeta de los modelos y data; el retorno del siguiente codigo es el path.  <br/>
+
     from pocketsphinx import *  
     Path_model = get_model_path()  
     Path_data = get_data_path() 
-    <br><br/>
+
 3: Descargar el modelo español mexicano y decomprimir en el path de modelo.  
+
     -https://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/Mexican%20Spanish/  
     -Renombra la carpeta como 'es-mx'  
     -Renombra el archivo '581HCDCONT10000SPA.dict' como 'cmudict-es-mx.dict'  
     -Renombra el archivo '581HCDCONT10000SPA.lm.bin' como 'es-mx.lm.bin'  
-    <br><br/>
+
 4: Descargar carpeta ppf y ubicarla dentro de 2 rutas  
+
     1: La carpeta ubicada en "get_data_path()"  
     2: Donde se vaya a colocar el archivo main  
-    <br><br/>
+
 5: Descargar el archivo gutenberg.DMP y ponerlo dentro de la carpeta ppf dentro del path de "get_data_path()"  
+
     -https://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/Archive/English%20Gutenberg%20Postprocessing/  
-    <br><br/>
+
 6: Descargar archivo "main.py", "text_cleaner.py" y "wav_2_text.py"  
+
     - Colocar estos 3 archivos en una carpeta acompañado de la carpeta ppf como se indicó previamente
 
 Para que funcione se debe tener esto en orden  
