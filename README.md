@@ -10,7 +10,7 @@ pasos para que funcione.
     -python -m pip install --upgrade pip setuptools wheel  
     -pip install --upgrade pocketsphinx 
     
- En caso de que falle la instalación de la librería principal, recurrir a la instalación manual descrita en Pypi y sus diferentes versiones
+ En caso de que falle la instalación de la librería principal, recurrir a la instalación manual descrita en Pypi y sus diferentes versiones ya que se necesitarán 3 funciones vitales <it>get_data_path get_model_path decoder<it/>
  
  https://pypi.org/project/pocketsphinx/
 
